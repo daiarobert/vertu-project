@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vertu Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./components/navbar/navbar.css">
+    <link rel="stylesheet" href="./components/testDriveForm/testDriveForm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+      </nav>
+    </header>
+
+    <main>
+      <div id="loginRequired" style="display: none;">
+        <p class="message-text">You need to be logged in to book a test drive.</p>
+        
+        <form id="login">
+          <label class="email-label" for="email">Email:</label>
+          <input type="email" id="email" required placeholder=" Email">
+      
+          <label class="password-label" for="password">Password:</label>
+          <input type="password" id="password" required placeholder=" Password">
+      
+          <button class="btn-submit" type="submit">Log In</button>
+          <div class="credentials-container">
+            <div>Credentials:</div>
+              <div>Email: user@user.com</div>
+              <div>Password: test123</div>
+          </div>
+        </form>
+      </div>
+      
+      <div id="testDriveForm">
+        
+    </main>
+
+    <script src="scripts.js" type="module"></script>
+    
+  </body>
+</html>

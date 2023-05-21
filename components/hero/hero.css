@@ -1,0 +1,107 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../assets/Hero-banner-desktop.jpg");
+  min-height: 410px;
+}
+
+.hero-content {
+  padding: 20px;
+  padding-left: 115px;
+  padding-top: 0px;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  color: white;
+}
+
+.hero-text {
+  color: white;
+  font-size: 16px;
+}
+
+.btn-book-hero,
+.btn-book {
+  font-size: 15px;
+  height: 50px;
+  background-color: #00e2c9;
+  width: 170px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: darkslategrey;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  #hero {
+    margin-bottom: 0px;
+  }
+  .hero-container {
+    display: block;
+    min-height: unset;
+    background-image: none;
+    background-color: #222222;
+  }
+
+  .hero-content {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .btn-book-hero,
+  .btn-book {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-title {
+    line-height: 0.7;
+    font-size: 30px;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .hero-container::before {
+    content: "";
+    display: block;
+    height: 410px;
+    background-image: url("../../assets/Hero-banner-mobile.jpg");
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 660px) {
+  .hero-container::before {
+    height: 300px;
+  }
+}
+
+@media (max-width: 490px) {
+  .hero-container::before {
+    max-height: 260px;
+  }
+}
+@media (max-width: 400px) {
+  .hero-container::before {
+    max-height: 210px;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero-container::before {
+    height: 150px;
+  }
+}

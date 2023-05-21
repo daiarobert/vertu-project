@@ -1,0 +1,60 @@
+#cardContainer {
+  display: flex;
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-evenly;
+  margin-top: 150px;
+}
+.card-car {
+  width: 350px;
+  border-radius: 10px;
+  border: 2px solid #e6e6e6;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.car-title {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.buttons {
+  margin-top: 50px;
+  gap: 20px;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+a.button1,
+a.button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  height: 45px;
+  background-color: #00e2c9;
+  width: 135px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: darkslategrey;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 1110px) {
+  #cardContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .card-car {
+    margin-bottom: 30px;
+  }
+}
