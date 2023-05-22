@@ -60,11 +60,6 @@ export function createTestDriveForm(containerElement) {
   hourInput.required = true;
   hourInput.classList.add("form-input");
 
-  const submitButton = document.createElement("button");
-  submitButton.type = "submit";
-  submitButton.textContent = "Submit";
-  submitButton.classList.add("btn-submit");
-
   // Append form fields to the form element
   formElement.appendChild(nameLabel);
   formElement.appendChild(nameInput);
@@ -78,7 +73,34 @@ export function createTestDriveForm(containerElement) {
   formElement.appendChild(dateInput);
   formElement.appendChild(hourLabel);
   formElement.appendChild(hourInput);
+
+  // Add submit button
+  const submitButton = document.createElement("button");
+  submitButton.type = "submit";
+  submitButton.textContent = "Submit";
+  submitButton.classList.add("btn-submit pulse-element");
   formElement.appendChild(submitButton);
+
+  // Add submit event listener to the form
+  formElement.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const formValues = {
+      name: nameInput.value,
+      email: emailInput.value,
+      phone: phoneInput.value,
+      car: carSelect.value,
+      date: dateInput.value,
+      hour: hourInput.value,
+    };
+    console.log("Form submitted:", formValues);
+    // Reset the form after logging the data
+    formElement.reset();
+    setTimeout(() => {
+      window.location.href = "/vertu-project";
+    }, 2000);
+  });
 
   // Append the form element to the container
   containerElement.appendChild(formElement);

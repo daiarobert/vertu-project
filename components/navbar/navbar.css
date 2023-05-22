@@ -37,21 +37,30 @@ nav {
 }
 .options a:hover {
   color: green;
+  transition: color 0.3s ease-in-out;
 }
 
 .options li.dropdown:hover ul.dropdown-menu {
   display: block;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .options li.dropdown ul.dropdown-menu {
   display: none;
   position: absolute;
-  top: 120%;
+  top: 100%;
   left: 0;
   border-radius: 10px;
   background-color: #ededed;
   padding: 10px;
   width: 90%;
+}
+
+.options li.dropdown:hover ul.dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .options li.dropdown ul.dropdown-menu li {
@@ -171,6 +180,7 @@ i.login-icon {
 .nav-chevron {
   margin-left: 5px;
   margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .mic-icon {
@@ -223,7 +233,7 @@ i.login-icon {
   color: #333;
 }
 
-.nav-chevron.up {
+.nav-chevron.up:hover {
   transform: rotate(180deg);
 }
 
@@ -240,6 +250,7 @@ i.login-icon {
   background-color: #333;
   margin: 3px 0;
 }
+
 nav.sticky {
   position: fixed;
   top: 0;

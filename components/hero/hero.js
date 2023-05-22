@@ -7,7 +7,7 @@ export function createHero(container) {
         <h1 class="hero-title" style="font-size: 35px;
         line-height: 1;">BMW i4 range</h1>
         <p class="hero-text" style="white-space: pre-line;">From the cool Trend and SUV-inspired Active \n to the sporty ST-Line, the eighth generation \n Fiesta impresses across the range.</p>
-        <a href="testDrive.html"><button class="btn-book-hero">Book a test drive</button></a>
+        <a href="testDrive.html"><button class="btn-book-hero pulse-element">Book a test drive</button></a>
       </div>
     </div>
   `;

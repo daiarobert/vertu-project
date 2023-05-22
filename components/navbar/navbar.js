@@ -4,7 +4,8 @@ export function createNavbar(container) {
   // Create logo element
   const logo = document.createElement("div");
   logo.classList.add("logo");
-  logo.innerHTML = '<a href="/"><img src="assets/logo.png" alt="Logo"></a>';
+  logo.innerHTML =
+    '<a href="/vertu-project"><img src="assets/logo.png" alt="Logo"></a>';
   navbar.appendChild(logo);
 
   // Create options container
@@ -51,9 +52,10 @@ export function createNavbar(container) {
     }</a>`;
 
     optionItem.addEventListener("click", (event) => {
-      event.preventDefault();
       const url = event.target.getAttribute("href");
-      window.location.href = url;
+      if (!option.dropdown && url) {
+        window.location.href = url;
+      }
     });
 
     if (option.dropdown) {
@@ -75,14 +77,6 @@ export function createNavbar(container) {
       });
 
       optionItem.appendChild(dropdownMenu);
-
-      // Show dropdown menu on click and toggle chevron icon
-      optionItem.addEventListener("click", () => {
-        dropdownMenu.classList.toggle("show");
-        const chevronIcon = optionItem.querySelector(".nav-chevron");
-        chevronIcon.classList.toggle("up");
-        chevronIcon.classList.toggle("down");
-      });
     } else {
       optionItem.classList.add("non-dropdown");
     }
@@ -248,7 +242,7 @@ export function createNavbar(container) {
     if (accessToken) {
       localStorage.removeItem("accessToken");
       updateLoginIcon();
-      window.location.href = "/";
+      window.location.href = "/vertu-project";
     } else {
       window.location.href = "login.html";
     }

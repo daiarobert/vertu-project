@@ -80,6 +80,7 @@ select.form-dropdown {
   form#testDriveForm,
   .login-container {
     max-width: 300px;
-    margin-top: 80px;
+    margin-top: 50px;
+    padding: 15px;
   }
 }

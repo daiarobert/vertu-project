@@ -20,7 +20,7 @@ export function createBookTestDrive(container) {
               <p>Electric range in miles</p>
             </div>
           </div>
-          <a href="testDrive.html"><button class="btn-book">Book a test drive</button></a>
+          <a href="testDrive.html"><button class="btn-book pulse-element">Book a test drive</button></a>
         </div>
         
       </div>
