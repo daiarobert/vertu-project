@@ -98,7 +98,7 @@ export function createTestDriveForm(containerElement) {
     // Reset the form after logging the data
     formElement.reset();
     setTimeout(() => {
-      window.location.href = "/vertu-project";
+      window.location.href = "/";
     }, 2000);
   });
 

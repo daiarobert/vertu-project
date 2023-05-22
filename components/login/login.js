@@ -1,4 +1,4 @@
-export function login(email, password, redirectTo = "/vertu-project") {
+export function login(email, password, redirectTo = "/") {
   return new Promise(async (resolve, reject) => {
     try {
       if (email === "user@user.com" && password === "test123") {
@@ -54,10 +54,10 @@ export function handleLoginFormSubmit(event, currentPath) {
 
   let redirectTo;
 
-  if (currentPath === "/vertu-project") {
-    redirectTo = "/vertu-project";
-  } else if (currentPath === "/vertu-project/testDrive.html") {
-    redirectTo = "/vertu-project/testDrive.html";
+  if (currentPath === "/") {
+    redirectTo = "/";
+  } else if (currentPath === "/testDrive.html") {
+    redirectTo = "/testDrive.html";
   }
 
   login(email, password, redirectTo)

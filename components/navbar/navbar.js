@@ -4,8 +4,7 @@ export function createNavbar(container) {
   // Create logo element
   const logo = document.createElement("div");
   logo.classList.add("logo");
-  logo.innerHTML =
-    '<a href="/vertu-project"><img src="assets/logo.png" alt="Logo"></a>';
+  logo.innerHTML = '<a href="/"><img src="assets/logo.png" alt="Logo"></a>';
   navbar.appendChild(logo);
 
   // Create options container
@@ -242,7 +241,7 @@ export function createNavbar(container) {
     if (accessToken) {
       localStorage.removeItem("accessToken");
       updateLoginIcon();
-      window.location.href = "/vertu-project";
+      window.location.href = "/";
     } else {
       window.location.href = "login.html";
     }
